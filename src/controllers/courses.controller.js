@@ -32,6 +32,7 @@ const read = (req, res) => {
 
 const update = (req, res) => {
     const id = req.params.id;
+    console.log(id);
     Course.findById(id).exec((err, data) => {
         if(err || !data){
             return res.status(400).json('Course not found!');
